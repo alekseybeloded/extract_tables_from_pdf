@@ -20,8 +20,8 @@ def extract_pdf(pdf_path: str) -> list[Table]:
     pages = pdf.pages[:]
     for page in pages:
         page_tables = extract_page(page)
-        tables.extend(page_tables)        
-    
+        tables.extend(page_tables)
+
     return tables
 
 
@@ -36,12 +36,12 @@ def extract_table(pdf_table: PdfTable) -> Table:
     return Table(rows)
 
 
-def find_target_tables(tables: list[Table]) -> list[Table] :
+def find_target_tables(tables: list[Table]) -> list:
     target_tables = []
     for table in tables:
         for row in table.rows:
             for cell in row.cells:
                 if cell and 'Площадь' in cell:
                     target_tables.append(table)
-    
+
     return target_tables
