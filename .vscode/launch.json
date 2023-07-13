@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "app",
+            "type": "python",
+            "request": "launch",
+            "module": "app",
+            "console": "internalConsole",
+            "justMyCode": true,
+            "args": ["data/decoration.pdf"]
+        }
+    ]
+}

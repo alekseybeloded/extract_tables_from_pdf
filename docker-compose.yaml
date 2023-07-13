@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - "./data:/app/data:ro"
+    command: "data/decoration.pdf"
