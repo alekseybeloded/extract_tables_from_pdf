@@ -5,7 +5,7 @@ import sys
 def main() -> None:
     all_tables = extract_pdf(sys.argv[1])
     result = find_target_tables(all_tables)
-    print(result)
+    result
 
 
 if __name__ == '__main__':
